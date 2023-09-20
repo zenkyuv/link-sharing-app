@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 import styles from './style.module.css'
 
 function Navigation() {
@@ -8,19 +10,19 @@ function Navigation() {
 				<li><img src="/assets/images/logo-devlinks-large.svg" /></li>
 				<div className={styles.flexRow}>
 					<li>
-						<a href="#">
+						<Link to="/links">
 							<img src="/assets/images/icon-links-header.svg" />
 							Links
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="#">
+						<Link to="/profile-details">
 							<img src="/assets/images/icon-profile-details-header.svg" />
 							Profile Details
-						</a>
+						</Link>
 					</li>
 				</div>
-				<li><a className={styles.previewLink} href="#">Preview</a></li>
+				<li><Link className={styles.previewLink} to="/preview">Preview</Link></li>
 			</ol>
 		</nav>
 	)
