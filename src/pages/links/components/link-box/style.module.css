@@ -1,0 +1,47 @@
+.link {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background: var(--light-grey);
+	border-radius: 12px;
+	padding: 1em;
+}
+
+.selectPopup {
+	position: absolute;
+	top: 62%;
+	background: var(--white);
+	width: 100%;
+	border-radius: 8px;
+	max-height: 280px;
+	overflow-y: scroll;
+	z-index: 1;
+}
+
+.selectPopup:not([data-opened="true"]) {
+	display: none;
+}
+
+.selectedPlatform {
+	display: flex;
+	gap: 1em;
+	padding: 1em 0.5em;
+	border: 1px solid var(--borders);
+	background: var(--white);
+	cursor: pointer;
+	border-radius: 8px;
+
+	& img {
+		margin-left: 1em;
+	}
+
+}
+
+.platform {
+	display: flex;
+	padding: 1em 0.5em;
+	gap: 1em;
+	border-bottom: 1px solid var(--borders);
+	margin: 0 1em;
+	cursor: pointer;
+}

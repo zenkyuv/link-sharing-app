@@ -1,0 +1,43 @@
+.previewSection {
+	padding: 5em;
+	background: var(--white);
+	border-radius: 12px;
+}
+
+.previewImageBox {
+	position: relative;
+}
+
+.addedLinks {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	position: absolute;
+	align-items: center;
+	top: 278px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 237px;
+
+	& p {
+		color: var(--white);
+		font-size: var(--body-s);
+		margin-left: 0.5em;
+	}
+}
+
+.addedLink {
+	display: flex;
+	height: 44px;
+	background: red;
+	width: 100%;
+	align-items: center;
+	border-radius: 8px;
+}
+
+.platformIcon {
+	width: 16px;
+	margin-left: 1em;
+}
+
