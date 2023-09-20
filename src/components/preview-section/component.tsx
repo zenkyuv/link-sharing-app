@@ -1,4 +1,4 @@
-import {Link} from '../../../../types'
+import {Link} from '../../types'
 import styles from './style.module.css'
 import {get_icon_by_platform} from '../../utils/get_icon_by_platform'
 

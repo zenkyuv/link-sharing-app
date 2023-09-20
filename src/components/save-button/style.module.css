@@ -1,0 +1,19 @@
+.buttonBox {
+	background: white;
+	flex-direction: column;
+	height: 100%;
+	display: flex;
+	justify-content: end;
+	align-items: end;
+
+	& button {
+		padding: 0.6em 1.3em;
+		border: none;
+	}
+}
+
+.buttonBorder {
+	width: 100%;
+	border-top: var(--borders) 2px solid;
+	margin: 1em 0;
+}
