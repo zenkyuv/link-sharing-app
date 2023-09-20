@@ -1,69 +1,73 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@font-face {
+	font-family: "Instrument Sans Bold";
+	src: url('../public/assets/fonts/static/InstrumentSans-Bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 300 800;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+@font-face {
+	font-family: "Instrument Sans Regular";
+	src: url('../public/assets/fonts/static/InstrumentSans-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 300 800;
 }
-a:hover {
-  color: #535bf2;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: 2em;
+}
+
+#root {
+	width: 1200px;
+	display: flex;
+}
+
+html {
+	--heading-m: 32px;
+	--heading-s: 16px;
+	--body-m: 16px;
+	--body-s: 12px;
+
+	--heading-font: "Instrument Sans Bold";
+	--body-font: "Instrument Sans Regular";
+
+	--purple: #633CFF;
+	--light-purple: #BEADFF;
+	--purple-hover: #EFEBFF;
+	--dark-grey: #333333;
+	--grey: #737373;
+	--borders: #D9D9D9;
+	--light-grey: #FAFAFA;
+	--white: #FFFFFF;
+	--red: #FF3939;
+
+	background: var(--light-grey);
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+	line-height: 150%;
+	font-size: var(--heading-m);
+	font-family: var(--heading-font);
+}
+
+h2 {
+	line-height: 150%;
+	font-size: var(--heading-s);
+	font-family: var(--heading-font);
+}
+
+p, span, a, label, input::placeholder, select {
+	font-family: var(--body-font);
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+	font-family: "Instrument Sans Bold";
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
