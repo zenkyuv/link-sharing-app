@@ -3,9 +3,11 @@ import {useState} from 'react'
 import {Link} from '../../types'
 import styles from './style.module.css'
 import LinkBox from './components/link-box/component'
-import PreviewSection from './components/preview-section/component'
+import Navigation from '../../components/navigation/component'
+import SaveButton from '../../components/save-button/component'
+import PreviewSection from '../../components/preview-section/component'
 
-export default function LinksPage() {
+export default function Links() {
 	const [links, setLinks] = useState<Link[]>([])
 
 	const handle_button_save = () => {}
@@ -32,30 +34,28 @@ export default function LinksPage() {
 	}
 
 	return (
-		<form className={styles.container}>
-			<PreviewSection links={links} />
-			<div className={styles.customizeSection}>
-				<h1>Customize your links</h1>
-				<p>Add/edit/remove links below and then share all your profiles with the world!</p>
-				<button
-					type="button"
-					disabled={links.length === 5}
-					onPointerDown={() => setLinks((links) => [...links, {url: "", icon_src: "", platform: "Github"}])}
-					className={styles.addLinkButton}>
-					+ Add new link
-				</button>
-				<div className={styles.linksBox}>
-				{links.length > 0
-					? render_links()
-					: render_empty_info()
-				}
+		<>
+			<Navigation/>
+			<form className={styles.container}>
+				<PreviewSection links={links} />
+				<div className={styles.customizeSection}>
+					<h1>Customize your links</h1>
+					<p>Add/edit/remove links below and then share all your profiles with the world!</p>
+					<button
+						type="button"
+						disabled={links.length === 5}
+						onPointerDown={() => setLinks((links) => [...links, {url: "", icon_src: "", platform: "Github"}])}
+						className={styles.addLinkButton}>
+						+ Add new link
+					</button>
+					{links.length > 0
+						? render_links()
+						: render_empty_info()
+					}
+					<SaveButton handle_button_save={handle_button_save} />
 				</div>
-				<div className={styles.buttonBox}>
-					<div className={styles.buttonBorder}></div>
-					<button onPointerDown={handle_button_save}>Save</button>
-				</div>
-			</div>
-		</form>
+			</form>
+		</>
 	)
 }
 
