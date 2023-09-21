@@ -15,6 +15,7 @@
 	& a {
 		font-family: var(--heading-font);
 		text-decoration: none;
+		padding: 0.5em;
 
 		& span {
 			font-family: var(--heading-font);
@@ -22,6 +23,11 @@
 
 	}
 
+}
+
+li:hover {
+	background: var(--purple-hover);
+	border-radius: 8px;
 }
 
 .icon {
@@ -33,10 +39,10 @@
 
 .flexRow {
 	display: flex;
-	gap: 2em;
+	gap: 1em;
 
-	& img {
-		margin-right: 0.3em;
+	& span {
+		margin-left: 0.3em;
 	}
 
 	& a, a:visited {
@@ -53,6 +59,19 @@
 	color: var(--purple);
 }
 
+.active {
+	background: var(--purple-hover);
+	border-radius: 8px;
+	
+	& img {
+		filter: brightness(0) saturate(100%) invert(24%) sepia(80%) saturate(2371%) hue-rotate(242deg) brightness(99%) contrast(113%);
+	}
+
+	& span {
+		color: var(--purple);
+	}
+
+}
 
 @media only screen and (max-width: 600px) {
 	.navigation {
