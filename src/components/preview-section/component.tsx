@@ -12,7 +12,7 @@ export default function PreviewSection({links}: PreviewSectionProps) {
 			<div className={styles.previewImageBox}>
 				<div className={styles.addedLinks}>
 					{links.map(link => (
-						<div className={styles.addedLink}>
+						<div data-platform={link.platform} className={styles.addedLink}>
 							<img className={styles.platformIcon} src={get_icon_by_platform(link.platform)} />
 							<p>{link.platform}</p>
 						</div>

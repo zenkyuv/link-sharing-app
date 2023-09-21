@@ -3,7 +3,7 @@ import {useState} from 'react'
 import styles from './style.module.css'
 import {Platform} from '../../../../types'
 import {Link, platforms} from '../../../../types'
-import {get_icon_by_platform} from '../../utils/get_icon_by_platform'
+import {get_icon_by_platform} from '../../../../utils/get_icon_by_platform'
 
 export interface LinkBoxProps {
 link: Link
@@ -14,7 +14,7 @@ i: number
 
 export default function LinkBox({link, i, links, setLinks}: LinkBoxProps) {
 
-	const [selectedPlatform, setSelectedPlatform] = useState<Platform>("Github")
+	const [selectedPlatform, setSelectedPlatform] = useState<Platform>(link.platform)
 	const [isSelectPopupOpen, setSelectPopupOpen] = useState(false)
 
 	const handle_platform_change = (platform: Platform) => {
@@ -34,7 +34,7 @@ export default function LinkBox({link, i, links, setLinks}: LinkBoxProps) {
 			<label>Platform</label>
 			<div className={styles.selectedPlatform} onPointerDown={() => setSelectPopupOpen(!isSelectPopupOpen)}>
 				<img src={get_icon_by_platform(selectedPlatform)} />
-				<span>{selectedPlatform}</span>
+				<input name="selected-platform" value={selectedPlatform} />
 			</div>
 			<div data-opened={isSelectPopupOpen} className={styles.selectPopup}>
 			{platforms.map((p) =>
@@ -46,11 +46,11 @@ export default function LinkBox({link, i, links, setLinks}: LinkBoxProps) {
 				</div>
 			)}
 			</div>
-			<label htmlFor="link">Link</label>
+			<label htmlFor="url">Link</label>
 			<input
 				placeholder="e.g. https://www.github.com/johnappleseed"
-				name="link"
-				value={link.url} 
+				name="url"
+				defaultValue={link.url}
 			/>
 		</div>
 	)
