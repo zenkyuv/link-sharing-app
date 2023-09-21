@@ -1,4 +1,7 @@
 .previewSection {
+	display: flex;
+	justify-content: center;
+	width: 400px;
 	padding: 5em;
 	background: var(--white);
 	border-radius: 12px;
@@ -30,7 +33,6 @@
 .addedLink {
 	display: flex;
 	height: 44px;
-	background: red;
 	width: 100%;
 	align-items: center;
 	border-radius: 8px;
@@ -41,3 +43,8 @@
 	margin-left: 1em;
 }
 
+@media only screen and (max-width: 900px) {
+	.previewSection {
+		display: none;
+	}
+}

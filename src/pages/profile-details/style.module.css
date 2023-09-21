@@ -2,6 +2,7 @@
 	width: 100%;
 	display: flex;
 	gap: 1.5em;
+	padding: 1em;
 }
 
 p {
@@ -33,6 +34,7 @@ p {
 	padding: 1em;
 	background: var(--light-grey);
 	border-radius: 12px;
+	text-align: center;
 
 	& label {
 		background: var(--purple-hover);
@@ -44,6 +46,8 @@ p {
 		height: 150px;
 		border-radius: 12px;
 		cursor: pointer;
+		min-width: 165px;
+		margin: 0.2em;
 
 		& p {
 			font-family: var(--heading-font);
@@ -51,7 +55,7 @@ p {
 		}
 
 		& img {
-			width: 40px;
+			max-width: 100px;
 		}
 
 	}
@@ -73,13 +77,39 @@ p {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 0.5em;
+
+		& p {
+			flex: 1;
+		}
 
 		& input {
 			border-radius: 8px;
 			border: 1px solid var(--borders);
 			padding: 1em;
-			width: 300px;
+			flex: 2;
 		}
 
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.profilePicture {
+		flex-wrap: wrap;
+		gap: 0.5em;
+
+		& p, div {
+			width: 100%;
+		}
+
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.profileDetails input {
+		max-width: 150px;
+	}
+	.container {
+		padding: 0;
 	}
 }

@@ -30,11 +30,23 @@
 	background: var(--white);
 	cursor: pointer;
 	border-radius: 8px;
+	align-items: center;
 
 	& img {
 		margin-left: 1em;
 	}
 
+	& input {
+		height: 15px;
+		border: none;
+		background: none;
+		pointer-events: none;
+	}
+
+}
+
+.url {
+	padding: 0 0.8em;
 }
 
 .platform {
@@ -44,4 +56,10 @@
 	border-bottom: 1px solid var(--borders);
 	margin: 0 1em;
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 400px) {
+	& .selectedPlatform input {
+		width: 150px;
+	}
 }

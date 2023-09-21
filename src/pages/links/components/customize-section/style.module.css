@@ -28,16 +28,16 @@ hr {
 	}
 
 	& input, select {
-		padding: 0 0.8em;
 		height: 45px;
 		border: 1px solid var(--borders);
 		font-size: var(--body-m);
 		border-radius: 8px;
 	}
+
 }
 
 .emptyBox {
-	padding: 5.5em;
+	padding: 10%;
 	gap: 1em;
 	display: flex;
 	flex-direction: column;
