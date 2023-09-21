@@ -27,6 +27,8 @@ body {
 #root {
 	width: 1200px;
 	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
 }
 
 html {
@@ -55,12 +57,14 @@ h1 {
 	line-height: 150%;
 	font-size: var(--heading-m);
 	font-family: var(--heading-font);
+	color: var(--dark-grey);
 }
 
 h2 {
 	line-height: 150%;
 	font-size: var(--heading-s);
 	font-family: var(--heading-font);
+	color: var(--dark-grey);
 }
 
 p, span, a, label, input::placeholder, select {
@@ -69,5 +73,67 @@ p, span, a, label, input::placeholder, select {
 
 button {
 	font-family: "Instrument Sans Bold";
+}
+
+.flexColumn {
+	display: flex;
+	flex-direction: column;
+}
+
+[data-platform="Github"] {
+	background: #1A1A1A;
+}
+
+[data-platform="Frontend Mentor"] {
+	background: #FFFFFF;
+	border: 1px solid var(--borders);
+}
+
+[data-platform="Twitter"] {
+	background: #43B7E9;
+}
+
+[data-platform="LinkedIn"] {
+	background: #2D68FF;
+}
+
+[data-platform="YouTube"] {
+	background: #EE3939;
+}
+
+[data-platform="Facebook"] {
+	background: #2442AC;
+}
+
+[data-platform="Twitch"] {
+	background: #EE3FC8;
+}
+
+[data-platform="Dev.to"] {
+	background: var(--dark-grey);
+}
+
+[data-platform="Codewars"] {
+	background: #8A1A50;
+}
+
+[data-platform="Codepen"] {
+	background: #FFFFFF;
+}
+
+[data-platform="freeCodeCamp"] {
+	background: #302267;
+}
+
+[data-platform="GitLab"] {
+	background: #EB4925;
+}
+
+[data-platform="Hashnode"] {
+	background: #0330D1;
+}
+
+[data-platform="Stack Overflow"] {
+	background: #EC7100;
 }
 
