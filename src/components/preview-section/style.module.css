@@ -36,6 +36,11 @@
 	width: 100%;
 	align-items: center;
 	border-radius: 8px;
+
+	& img {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7496%) hue-rotate(287deg) brightness(101%) contrast(101%);
+	}
+
 }
 
 .platformIcon {

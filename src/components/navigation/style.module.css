@@ -25,9 +25,13 @@
 
 }
 
-li:hover {
-	background: var(--purple-hover);
-	border-radius: 8px;
+.flexRow {
+
+	& a:hover {
+		background: var(--purple-hover);
+		border-radius: 8px;
+	}
+
 }
 
 .icon {
@@ -57,6 +61,11 @@ li:hover {
 	border-radius: 8px;
 	border: 1px solid var(--purple);
 	color: var(--purple);
+	
+	&:hover {
+		background: var(--purple-hover);
+	}
+
 }
 
 .active {

@@ -91,7 +91,7 @@ button {
 }
 
 [data-platform="Frontend Mentor"] {
-	background: #FFFFFF;
+	background: linear-gradient(to right, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);
 	border: 1px solid var(--borders);
 }
 
@@ -124,7 +124,8 @@ button {
 }
 
 [data-platform="Codepen"] {
-	background: #FFFFFF;
+	background: linear-gradient(to right, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);
+	border: 1px solid var(--borders);
 }
 
 [data-platform="freeCodeCamp"] {

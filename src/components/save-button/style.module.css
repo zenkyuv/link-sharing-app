@@ -7,8 +7,17 @@
 	align-items: end;
 
 	& button {
-		padding: 0.6em 1.3em;
+		padding: 0.7em 1.5em;
 		border: none;
+		border-radius: 8px;
+		background: var(--purple);
+		color: var(--white);
+		cursor: pointer;
+
+		&:hover {
+			background: var(--light-purple);
+		}
+
 	}
 }
 

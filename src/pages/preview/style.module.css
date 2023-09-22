@@ -21,6 +21,11 @@
 			height: 35px;
 			align-items: center;
 			border-radius: 8px;
+			
+			&:hover {
+				background: var(--purple-hover);
+			}
+
 		}
 
 	}
@@ -34,6 +39,7 @@
 		border: none;
 		border-radius: 8px;
 		background: var(--purple);
+		cursor: pointer;
 	}
 
 }
@@ -75,6 +81,10 @@
 	padding: 1em;
 	border-radius: 8px;
 	gap: 0.5em;
+
+	& img {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7496%) hue-rotate(287deg) brightness(101%) contrast(101%);
+	}
 
 	& p {
 		color: var(--white);
