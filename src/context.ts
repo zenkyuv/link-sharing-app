@@ -20,12 +20,13 @@ export class Context {
 		this.profile.links = links
 	}
 
-	set profile_details({first_name, last_name, email}: ProfileDetails) {
+	set profile_details({first_name, last_name, email, image_url}: ProfileDetails) {
 		this.profile = {
 			...this.profile,
 			first_name,
 			last_name,
-			email
+			email,
+			image_url
 		}
 	}
 
