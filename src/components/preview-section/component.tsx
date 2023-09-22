@@ -2,8 +2,8 @@ import {Link} from '../../types'
 import styles from './style.module.css'
 import {get_icon_by_platform} from '../../utils/get_icon_by_platform'
 
-export interface PreviewSectionProps {
-links: Link[]
+interface PreviewSectionProps {
+	links: Link[]
 }
 
 export default function PreviewSection({links}: PreviewSectionProps) {
@@ -12,7 +12,9 @@ export default function PreviewSection({links}: PreviewSectionProps) {
 			<div className={styles.previewImageBox}>
 				<div className={styles.addedLinks}>
 					{links.map(link => (
-						<div data-platform={link.platform} className={styles.addedLink}>
+						<div
+								data-platform={link.platform}
+								className={styles.addedLink}>
 							<img className={styles.platformIcon} src={get_icon_by_platform(link.platform)} />
 							<p>{link.platform}</p>
 						</div>

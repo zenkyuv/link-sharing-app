@@ -7,8 +7,8 @@ import PreviewSection from '../../components/preview-section/component'
 import CustomizeSection from './components/customize-section/component'
 
 export default function Links({context}: ContextProp) {
-	const [links, setLinks] = useState<Link[]>(context.profile.links)
-	
+	const [links, setLinks] = useState<Link[]>(() => context.profile.links)
+
 	const handle_form_submit = (e: FormEvent) => {
 		e.preventDefault()
 		const form = e.currentTarget as HTMLFormElement
@@ -25,7 +25,7 @@ export default function Links({context}: ContextProp) {
 
 	return (
 		<>
-			<Navigation/>
+			<Navigation data-page="links" />
 			<form onSubmit={handle_form_submit} className={styles.container}>
 				<PreviewSection links={links} />
 				<CustomizeSection links={links} setLinks={setLinks} />

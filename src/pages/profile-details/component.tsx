@@ -33,8 +33,6 @@ function ProfileDetails({context}: ContextProp) {
 		}
 	}
 
-console.log("rerender")
-
 	return (
 		<>
 			<Navigation/>
