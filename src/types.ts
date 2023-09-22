@@ -25,3 +25,8 @@ export interface Profile {
 export interface ContextProp {
 	context: Context
 }
+
+export interface Destination {
+	link: Link | undefined
+	index: number | null
+}

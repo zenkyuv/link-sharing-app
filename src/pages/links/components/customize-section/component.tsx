@@ -1,6 +1,9 @@
-import {Link} from '../../../../types'
+import {useState} from 'react'
+
 import styles from './style.module.css'
 import LinkBox from '../link-box/component'
+import {Destination, Link} from '../../../../types'
+import DragDropWrapper from '../drag-drop-wrapper/component'
 import SaveButton from '../../../../components/save-button/component'
 
 interface CustomizeSectionProps{
@@ -9,12 +12,19 @@ interface CustomizeSectionProps{
 }
 
 export default function CustomizeSection({links, setLinks}: CustomizeSectionProps) {
+	const [source, setSource] = useState<Destination>({
+		link: undefined,
+		index: null
+	})
 
 	const render_links = () => {
 		return (
 			<div className={styles.links}>
 				{links.map((link, i) =>
-					(<LinkBox i={i} links={links} link={link} setLinks={setLinks} />))
+					(<DragDropWrapper link={link} index={i} setLinks={setLinks} setSource={setSource} source={source}>
+						<LinkBox index={i} links={links} link={link} setLinks={setLinks} />
+						</DragDropWrapper>
+					))
 				}
 			</div>
 		)
