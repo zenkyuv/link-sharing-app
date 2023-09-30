@@ -33,7 +33,7 @@ export default function LinkBox({link, index, links, setLinks}: LinkBoxProps) {
 	return (
 		<div
 			className={styles.link}>
-			<div className={styles.flexRow}><img src="/assets/images/icon-drag-and-drop.svg"/><span>Link #{index + 1}</span></div>
+			<div className={styles.flexRow}><img src="./assets/images/icon-drag-and-drop.svg"/><span>Link #{index + 1}</span></div>
 			<label>Platform</label>
 			<div tabIndex={0} className={styles.selectedPlatform} onPointerDown={() => setSelectPopupOpen(!isSelectPopupOpen)}>
 				<img src={get_icon_by_platform(selectedPlatform)} />

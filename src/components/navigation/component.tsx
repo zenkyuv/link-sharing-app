@@ -12,14 +12,14 @@ function Navigation() {
 				<li className={styles.icon}></li>
 				<div className={styles.flexRow}>
 					<li>
-						<Link className={location.pathname === "/links" ? styles.active : ""} to="/links">
-							<img src="/assets/images/icon-links-header.svg" />
+						<Link className={location.pathname === "/" ? styles.active : ""} to="/">
+							<img src="./assets/images/icon-links-header.svg" />
 							<span>Links</span>
 						</Link>
 					</li>
 					<li>
 						<Link className={location.pathname === "/profile-details" ? styles.active : ""} to="/profile-details">
-							<img src="/assets/images/icon-profile-details-header.svg" />
+							<img src="./assets/images/icon-profile-details-header.svg" />
 							<span>Profile Details</span>
 						</Link>
 					</li>

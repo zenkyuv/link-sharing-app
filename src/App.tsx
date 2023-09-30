@@ -31,7 +31,7 @@ function App() {
 			onAnimationEnd={handleAnimationEnd}
 		>
 			<Routes location={displayLocation}>
-				<Route path="/links" element={<Links context={context} />} />
+				<Route path="/" element={<Links context={context} />} />
 				<Route path="/profile-details" element={<ProfileDetails context={context} />} />
 				<Route path="/preview" element={<Preview context={context} />} />
 			</Routes>

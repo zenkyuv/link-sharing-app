@@ -10,7 +10,7 @@ function Preview({context}: ContextProp) {
 			<div className={styles.background}></div>
 			<div className={styles.navigation}>
 				<nav>
-					<Link to="/links">
+					<Link to="/">
 						Back to Editor
 					</Link>
 				</nav>

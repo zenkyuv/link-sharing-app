@@ -51,7 +51,7 @@ function ProfileDetails({context}: ContextProp) {
 							{image
 								? <img src={image} />
 								: <>
-										<img src="/assets/images/icon-upload-image.svg" />
+										<img src="./assets/images/icon-upload-image.svg" />
 										<p>+ Upload Image</p>
 									</>
 							}
