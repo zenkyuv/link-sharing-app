@@ -39,7 +39,7 @@ jobs:
 
     - name: 🔨 build
       run: npm run build
-
+    
     - name: 🚚 tracking ignored stuff
       run: |
         sed -i.bak -e '/^\/node_modules$/d' .gitignore
@@ -56,7 +56,7 @@ jobs:
     - name: 📤 upload pages artifact
       uses: actions/upload-pages-artifact@v1
       with:
-        path: 'dist'
+        path: './dist'
 
     - name: 🚀 deploy to github pages
       id: deployment
