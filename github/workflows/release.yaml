@@ -66,4 +66,6 @@ jobs:
 
     - name: 🚀 deploy to github pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: 'dist'
