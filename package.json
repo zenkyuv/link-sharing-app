@@ -1,7 +1,7 @@
 {
-  "homepage": "https://zenkyuv.github.io/link-sharing-app",
+  "homepage": "https://zenkyuv.github.io/",
   "name": "link-sharing-app",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -16,6 +16,7 @@
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
+    "@types/node": "^20.8.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
