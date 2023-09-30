@@ -50,12 +50,6 @@ jobs:
         rm -rf node_modules
         npm ci --omit=dev
 
-    - name: 🗃️ copy files
-      run: |
-        rm -rf x/node_modules x/s
-        cp -r node_modules/ x/
-        cp -r s/ x/
-
     - name: 📝 configure pages
       uses: actions/configure-pages@v2
 
@@ -66,6 +60,6 @@ jobs:
 
     - name: 🚀 deploy to github pages
       id: deployment
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
+      uses: actions/deploy-pages@v1
+      with: 
         folder: 'dist'
