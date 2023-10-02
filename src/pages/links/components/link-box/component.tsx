@@ -37,11 +37,12 @@ export default function LinkBox({link, index, links, setLinks}: LinkBoxProps) {
 			<label>Platform</label>
 			<div tabIndex={0} className={styles.selectedPlatform} onPointerDown={() => setSelectPopupOpen(!isSelectPopupOpen)}>
 				<img src={get_icon_by_platform(selectedPlatform)} />
-				<input name="selected-platform" value={selectedPlatform} />
+				<input name="selected-platform" onChange={() => {}} value={selectedPlatform} />
 			</div>
 			<div data-opened={isSelectPopupOpen} className={styles.selectPopup}>
-			{platforms.map((p) =>
+			{platforms.map((p, i) =>
 				<div
+					key={i}
 					data-selected={selectedPlatform === p}
 					onPointerDown={() => handle_platform_change(p)}
 					className={styles.platform}>
@@ -56,7 +57,6 @@ export default function LinkBox({link, index, links, setLinks}: LinkBoxProps) {
 				className={styles.url}
 				placeholder="e.g. https://www.github.com/johnappleseed"
 				name="url"
-				defaultValue={link.url}
 			/>
 		</div>
 	)

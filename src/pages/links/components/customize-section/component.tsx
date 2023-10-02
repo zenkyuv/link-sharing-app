@@ -21,7 +21,7 @@ export default function CustomizeSection({links, setLinks}: CustomizeSectionProp
 		return (
 			<div className={styles.links}>
 				{links.map((link, i) =>
-					(<DragDropWrapper link={link} index={i} setLinks={setLinks} setSource={setSource} source={source}>
+					(<DragDropWrapper key={i} link={link} index={i} setLinks={setLinks} setSource={setSource} source={source}>
 						<LinkBox index={i} links={links} link={link} setLinks={setLinks} />
 						</DragDropWrapper>
 					))

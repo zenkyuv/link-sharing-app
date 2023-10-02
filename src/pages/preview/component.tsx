@@ -22,8 +22,8 @@ function Preview({context}: ContextProp) {
 					<h1>{context.profile.first_name} {context.profile.last_name}</h1>
 					<p>{context.profile.email}</p>
 				</div>
-				{context.profile.links.map(link => (
-					<div className={styles.platform} data-platform={link.platform}>
+				{context.profile.links.map((link, i) => (
+					<div key={i} className={styles.platform} data-platform={link.platform}>
 						<img src={get_icon_by_platform(link.platform)} />
 						<p>{link.platform}</p>
 					</div>

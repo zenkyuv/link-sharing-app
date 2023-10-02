@@ -11,8 +11,9 @@ export default function PreviewSection({links}: PreviewSectionProps) {
 		<div className={styles.previewSection}>
 			<div className={styles.previewImageBox}>
 				<div className={styles.addedLinks}>
-					{links.map(link => (
+					{links.map((link, i) => (
 						<div
+								key={i}
 								data-platform={link.platform}
 								className={styles.addedLink}>
 							<img className={styles.platformIcon} src={get_icon_by_platform(link.platform)} />
