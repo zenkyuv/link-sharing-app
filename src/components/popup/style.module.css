@@ -1,0 +1,29 @@
+.dialog {
+	position: absolute;
+	bottom: 2em;
+	margin: auto;
+	padding: 1em;
+	background: var(--dark-grey);
+	border-radius: 12px;
+	border: none;
+	animation-name: popup_modal;
+	animation-duration: 4.1s;
+
+	& p {
+		display: flex;
+		gap: 0.5em;
+		align-items: center;
+		font-size: var(--heading-s);
+		font-family: var(--heading-font);
+		color: white;
+		font-weight: bold;
+	}
+
+}
+
+@keyframes popup_modal {
+	0% {bottom: 0; opacity: 0;}
+	30% {bottom: 2em; opacity: 1;}
+	80% {bottom: 2em; opacity: 1;}
+	100% {bottom: 0; opacity: 0;}
+}
