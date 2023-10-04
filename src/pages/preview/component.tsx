@@ -11,6 +11,11 @@ function Preview({context}: ContextProp) {
 		"The link has been copied to your clipboard!",
 		"./assets/images/icon-link-copied-to-clipboard.svg"
 	)
+
+	const handle_copy_to_clipboard = (url: string) => {
+		navigator.clipboard
+			.writeText(url)
+	}
 	
 	return (
 		<div className={styles.preview}>
@@ -30,7 +35,7 @@ function Preview({context}: ContextProp) {
 					<p>{context.profile.email}</p>
 				</div>
 				{context.profile.links.map((link, i) => (
-					<div onClick={handle_popup} key={i} className={styles.platform} data-platform={link.platform}>
+					<div onClick={() => {handle_popup(), handle_copy_to_clipboard(link.url)}} key={i} className={styles.platform} data-platform={link.platform}>
 						<div className={styles.flexRow}>
 							<img src={get_icon_by_platform(link.platform)} />
 							<p>{link.platform}</p>
