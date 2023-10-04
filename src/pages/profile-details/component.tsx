@@ -1,4 +1,4 @@
-import {FormEvent, ChangeEvent, useState} from "react"
+import {FormEvent, ChangeEvent, useState, useRef} from "react"
 
 import {ContextProp} from "../../types"
 import styles from './style.module.css'
@@ -9,6 +9,7 @@ import PreviewSection from "../../components/preview-section/component"
 function ProfileDetails({context}: ContextProp) {
 
 	const [image, setImage] = useState<string | undefined>(context.profile.image_url)
+	const formRef = useRef<null | HTMLFormElement>(null)
 
 	const handle_form_submit = (e: FormEvent) => {
 		e.preventDefault()
@@ -36,7 +37,7 @@ function ProfileDetails({context}: ContextProp) {
 	return (
 		<>
 			<Navigation/>
-			<form onSubmit={handle_form_submit} className={styles.container}>
+			<form ref={formRef} onSubmit={handle_form_submit} className={styles.container}>
 				<PreviewSection links={context.profile.links} />
 				<div className={styles.profileDetails}>
 					
@@ -78,7 +79,7 @@ function ProfileDetails({context}: ContextProp) {
 						</label>
 					</div>
 
-					<SaveButton />
+					<SaveButton formRef={formRef} />
 				</div>
 			</form>
 		</>

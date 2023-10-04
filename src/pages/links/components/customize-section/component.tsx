@@ -9,9 +9,10 @@ import SaveButton from '../../../../components/save-button/component'
 interface CustomizeSectionProps{
 	links: Link[]
 	setLinks: React.Dispatch<React.SetStateAction<Link[]>>
+	formRef: React.MutableRefObject<HTMLFormElement | null>
 }
 
-export default function CustomizeSection({links, setLinks}: CustomizeSectionProps) {
+export default function CustomizeSection({links, setLinks, formRef}: CustomizeSectionProps) {
 	const [source, setSource] = useState<Destination>({
 		link: undefined,
 		index: null
@@ -58,7 +59,7 @@ export default function CustomizeSection({links, setLinks}: CustomizeSectionProp
 				? render_links()
 				: render_empty_info()
 			}
-			<SaveButton />
+			<SaveButton formRef={formRef} />
 		</div>
 	)
 }

@@ -1,4 +1,4 @@
-import {useState, FormEvent} from 'react'
+import {useState, FormEvent, useRef} from 'react'
 
 import styles from './style.module.css'
 import {ContextProp, Link, Platform} from '../../types'
@@ -8,6 +8,7 @@ import CustomizeSection from './components/customize-section/component'
 
 export default function Links({context}: ContextProp) {
 	const [links, setLinks] = useState<Link[]>(() => context.profile.links)
+	const formRef = useRef<null | HTMLFormElement>(null)
 
 	const handle_form_submit = (e: FormEvent) => {
 		e.preventDefault()
@@ -26,9 +27,9 @@ export default function Links({context}: ContextProp) {
 	return (
 		<>
 			<Navigation data-page="links" />
-			<form onSubmit={handle_form_submit} className={styles.container}>
+			<form ref={formRef} onSubmit={handle_form_submit} className={styles.container}>
 				<PreviewSection links={links} />
-				<CustomizeSection links={links} setLinks={setLinks} />
+				<CustomizeSection formRef={formRef} links={links} setLinks={setLinks} />
 			</form>
 		</>
 	)

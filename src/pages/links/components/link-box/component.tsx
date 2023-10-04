@@ -53,6 +53,8 @@ export default function LinkBox({link, index, links, setLinks}: LinkBoxProps) {
 			</div>
 			<label htmlFor="url">Link</label>
 			<input
+				type='url'
+				required
 				tabIndex={0}
 				className={styles.url}
 				placeholder="e.g. https://www.github.com/johnappleseed"
