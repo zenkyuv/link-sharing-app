@@ -78,6 +78,7 @@
 
 .platform {
 	display: flex;
+	justify-content: space-between;
 	padding: 1em;
 	border-radius: 8px;
 	gap: 0.5em;
@@ -90,6 +91,11 @@
 		color: var(--white);
 	}
 
+}
+
+.flexRow {
+	display: flex;
+	gap: 0.5em;
 }
 
 .avatar {
