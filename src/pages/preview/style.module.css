@@ -82,6 +82,7 @@
 	padding: 1em;
 	border-radius: 8px;
 	gap: 0.5em;
+	cursor: pointer;
 
 	& img {
 		filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7496%) hue-rotate(287deg) brightness(101%) contrast(101%);
